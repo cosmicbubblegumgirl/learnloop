@@ -11,8 +11,8 @@
     },
     {
       "label": "Active records",
-      "value": "7",
-      "delta": "+3"
+      "value": "100",
+      "delta": "100 seeded"
     },
     {
       "label": "Workflow steps",
@@ -28,30 +28,1003 @@
   "records": [
     {
       "id": "learnloop-1",
-      "title": "Quiz checkpoint branch",
+      "title": "Quiz checkpoint branch #001",
       "status": "Objective mapping",
       "owner": "Course builder",
-      "score": 92,
+      "score": 42,
       "trend": "High attention",
-      "updated": "8 min ago"
+      "updated": "8 min ago",
+      "demoSeed": true
     },
     {
       "id": "learnloop-2",
-      "title": "Confidence dip",
+      "title": "Confidence dip #002",
       "status": "Adaptive checkpoints",
       "owner": "Learner path",
-      "score": 80,
+      "score": 49,
       "trend": "In progress",
-      "updated": "19 min ago"
+      "updated": "13 min ago",
+      "demoSeed": true
     },
     {
       "id": "learnloop-3",
-      "title": "Next lesson suggested",
+      "title": "Next lesson suggested #003",
       "status": "Confidence prompts",
       "owner": "Cohort dashboard",
+      "score": 56,
+      "trend": "Ready",
+      "updated": "18 min ago",
+      "demoSeed": true
+    },
+    {
+      "id": "learnloop-4",
+      "title": "Quiz checkpoint branch #004",
+      "status": "Cohort insights",
+      "owner": "Recommendation lab",
+      "score": 63,
+      "trend": "High attention",
+      "updated": "23 min ago",
+      "demoSeed": true
+    },
+    {
+      "id": "learnloop-5",
+      "title": "Confidence dip #005",
+      "status": "Objective mapping",
+      "owner": "Course builder",
+      "score": 70,
+      "trend": "In progress",
+      "updated": "28 min ago",
+      "demoSeed": true
+    },
+    {
+      "id": "learnloop-6",
+      "title": "Next lesson suggested #006",
+      "status": "Adaptive checkpoints",
+      "owner": "Learner path",
+      "score": 77,
+      "trend": "Ready",
+      "updated": "33 min ago",
+      "demoSeed": true
+    },
+    {
+      "id": "learnloop-7",
+      "title": "Quiz checkpoint branch #007",
+      "status": "Confidence prompts",
+      "owner": "Cohort dashboard",
+      "score": 84,
+      "trend": "High attention",
+      "updated": "38 min ago",
+      "demoSeed": true
+    },
+    {
+      "id": "learnloop-8",
+      "title": "Confidence dip #008",
+      "status": "Cohort insights",
+      "owner": "Recommendation lab",
+      "score": 91,
+      "trend": "In progress",
+      "updated": "43 min ago",
+      "demoSeed": true
+    },
+    {
+      "id": "learnloop-9",
+      "title": "Next lesson suggested #009",
+      "status": "Objective mapping",
+      "owner": "Course builder",
+      "score": 98,
+      "trend": "Ready",
+      "updated": "48 min ago",
+      "demoSeed": true
+    },
+    {
+      "id": "learnloop-10",
+      "title": "Quiz checkpoint branch #010",
+      "status": "Adaptive checkpoints",
+      "owner": "Learner path",
+      "score": 48,
+      "trend": "High attention",
+      "updated": "53 min ago",
+      "demoSeed": true
+    },
+    {
+      "id": "learnloop-11",
+      "title": "Confidence dip #011",
+      "status": "Confidence prompts",
+      "owner": "Cohort dashboard",
+      "score": 55,
+      "trend": "In progress",
+      "updated": "58 min ago",
+      "demoSeed": true
+    },
+    {
+      "id": "learnloop-12",
+      "title": "Next lesson suggested #012",
+      "status": "Cohort insights",
+      "owner": "Recommendation lab",
+      "score": 62,
+      "trend": "Ready",
+      "updated": "63 min ago",
+      "demoSeed": true
+    },
+    {
+      "id": "learnloop-13",
+      "title": "Quiz checkpoint branch #013",
+      "status": "Objective mapping",
+      "owner": "Course builder",
+      "score": 69,
+      "trend": "High attention",
+      "updated": "68 min ago",
+      "demoSeed": true
+    },
+    {
+      "id": "learnloop-14",
+      "title": "Confidence dip #014",
+      "status": "Adaptive checkpoints",
+      "owner": "Learner path",
+      "score": 76,
+      "trend": "In progress",
+      "updated": "73 min ago",
+      "demoSeed": true
+    },
+    {
+      "id": "learnloop-15",
+      "title": "Next lesson suggested #015",
+      "status": "Confidence prompts",
+      "owner": "Cohort dashboard",
+      "score": 83,
+      "trend": "Ready",
+      "updated": "78 min ago",
+      "demoSeed": true
+    },
+    {
+      "id": "learnloop-16",
+      "title": "Quiz checkpoint branch #016",
+      "status": "Cohort insights",
+      "owner": "Recommendation lab",
+      "score": 90,
+      "trend": "High attention",
+      "updated": "83 min ago",
+      "demoSeed": true
+    },
+    {
+      "id": "learnloop-17",
+      "title": "Confidence dip #017",
+      "status": "Objective mapping",
+      "owner": "Course builder",
+      "score": 97,
+      "trend": "In progress",
+      "updated": "88 min ago",
+      "demoSeed": true
+    },
+    {
+      "id": "learnloop-18",
+      "title": "Next lesson suggested #018",
+      "status": "Adaptive checkpoints",
+      "owner": "Learner path",
+      "score": 47,
+      "trend": "Ready",
+      "updated": "93 min ago",
+      "demoSeed": true
+    },
+    {
+      "id": "learnloop-19",
+      "title": "Quiz checkpoint branch #019",
+      "status": "Confidence prompts",
+      "owner": "Cohort dashboard",
+      "score": 54,
+      "trend": "High attention",
+      "updated": "98 min ago",
+      "demoSeed": true
+    },
+    {
+      "id": "learnloop-20",
+      "title": "Confidence dip #020",
+      "status": "Cohort insights",
+      "owner": "Recommendation lab",
+      "score": 61,
+      "trend": "In progress",
+      "updated": "103 min ago",
+      "demoSeed": true
+    },
+    {
+      "id": "learnloop-21",
+      "title": "Next lesson suggested #021",
+      "status": "Objective mapping",
+      "owner": "Course builder",
       "score": 68,
       "trend": "Ready",
-      "updated": "30 min ago"
+      "updated": "108 min ago",
+      "demoSeed": true
+    },
+    {
+      "id": "learnloop-22",
+      "title": "Quiz checkpoint branch #022",
+      "status": "Adaptive checkpoints",
+      "owner": "Learner path",
+      "score": 75,
+      "trend": "High attention",
+      "updated": "113 min ago",
+      "demoSeed": true
+    },
+    {
+      "id": "learnloop-23",
+      "title": "Confidence dip #023",
+      "status": "Confidence prompts",
+      "owner": "Cohort dashboard",
+      "score": 82,
+      "trend": "In progress",
+      "updated": "118 min ago",
+      "demoSeed": true
+    },
+    {
+      "id": "learnloop-24",
+      "title": "Next lesson suggested #024",
+      "status": "Cohort insights",
+      "owner": "Recommendation lab",
+      "score": 89,
+      "trend": "Ready",
+      "updated": "123 min ago",
+      "demoSeed": true
+    },
+    {
+      "id": "learnloop-25",
+      "title": "Quiz checkpoint branch #025",
+      "status": "Objective mapping",
+      "owner": "Course builder",
+      "score": 96,
+      "trend": "High attention",
+      "updated": "128 min ago",
+      "demoSeed": true
+    },
+    {
+      "id": "learnloop-26",
+      "title": "Confidence dip #026",
+      "status": "Adaptive checkpoints",
+      "owner": "Learner path",
+      "score": 46,
+      "trend": "In progress",
+      "updated": "133 min ago",
+      "demoSeed": true
+    },
+    {
+      "id": "learnloop-27",
+      "title": "Next lesson suggested #027",
+      "status": "Confidence prompts",
+      "owner": "Cohort dashboard",
+      "score": 53,
+      "trend": "Ready",
+      "updated": "138 min ago",
+      "demoSeed": true
+    },
+    {
+      "id": "learnloop-28",
+      "title": "Quiz checkpoint branch #028",
+      "status": "Cohort insights",
+      "owner": "Recommendation lab",
+      "score": 60,
+      "trend": "High attention",
+      "updated": "143 min ago",
+      "demoSeed": true
+    },
+    {
+      "id": "learnloop-29",
+      "title": "Confidence dip #029",
+      "status": "Objective mapping",
+      "owner": "Course builder",
+      "score": 67,
+      "trend": "In progress",
+      "updated": "148 min ago",
+      "demoSeed": true
+    },
+    {
+      "id": "learnloop-30",
+      "title": "Next lesson suggested #030",
+      "status": "Adaptive checkpoints",
+      "owner": "Learner path",
+      "score": 74,
+      "trend": "Ready",
+      "updated": "153 min ago",
+      "demoSeed": true
+    },
+    {
+      "id": "learnloop-31",
+      "title": "Quiz checkpoint branch #031",
+      "status": "Confidence prompts",
+      "owner": "Cohort dashboard",
+      "score": 81,
+      "trend": "High attention",
+      "updated": "158 min ago",
+      "demoSeed": true
+    },
+    {
+      "id": "learnloop-32",
+      "title": "Confidence dip #032",
+      "status": "Cohort insights",
+      "owner": "Recommendation lab",
+      "score": 88,
+      "trend": "In progress",
+      "updated": "163 min ago",
+      "demoSeed": true
+    },
+    {
+      "id": "learnloop-33",
+      "title": "Next lesson suggested #033",
+      "status": "Objective mapping",
+      "owner": "Course builder",
+      "score": 95,
+      "trend": "Ready",
+      "updated": "168 min ago",
+      "demoSeed": true
+    },
+    {
+      "id": "learnloop-34",
+      "title": "Quiz checkpoint branch #034",
+      "status": "Adaptive checkpoints",
+      "owner": "Learner path",
+      "score": 45,
+      "trend": "High attention",
+      "updated": "173 min ago",
+      "demoSeed": true
+    },
+    {
+      "id": "learnloop-35",
+      "title": "Confidence dip #035",
+      "status": "Confidence prompts",
+      "owner": "Cohort dashboard",
+      "score": 52,
+      "trend": "In progress",
+      "updated": "178 min ago",
+      "demoSeed": true
+    },
+    {
+      "id": "learnloop-36",
+      "title": "Next lesson suggested #036",
+      "status": "Cohort insights",
+      "owner": "Recommendation lab",
+      "score": 59,
+      "trend": "Ready",
+      "updated": "183 min ago",
+      "demoSeed": true
+    },
+    {
+      "id": "learnloop-37",
+      "title": "Quiz checkpoint branch #037",
+      "status": "Objective mapping",
+      "owner": "Course builder",
+      "score": 66,
+      "trend": "High attention",
+      "updated": "188 min ago",
+      "demoSeed": true
+    },
+    {
+      "id": "learnloop-38",
+      "title": "Confidence dip #038",
+      "status": "Adaptive checkpoints",
+      "owner": "Learner path",
+      "score": 73,
+      "trend": "In progress",
+      "updated": "193 min ago",
+      "demoSeed": true
+    },
+    {
+      "id": "learnloop-39",
+      "title": "Next lesson suggested #039",
+      "status": "Confidence prompts",
+      "owner": "Cohort dashboard",
+      "score": 80,
+      "trend": "Ready",
+      "updated": "198 min ago",
+      "demoSeed": true
+    },
+    {
+      "id": "learnloop-40",
+      "title": "Quiz checkpoint branch #040",
+      "status": "Cohort insights",
+      "owner": "Recommendation lab",
+      "score": 87,
+      "trend": "High attention",
+      "updated": "203 min ago",
+      "demoSeed": true
+    },
+    {
+      "id": "learnloop-41",
+      "title": "Confidence dip #041",
+      "status": "Objective mapping",
+      "owner": "Course builder",
+      "score": 94,
+      "trend": "In progress",
+      "updated": "208 min ago",
+      "demoSeed": true
+    },
+    {
+      "id": "learnloop-42",
+      "title": "Next lesson suggested #042",
+      "status": "Adaptive checkpoints",
+      "owner": "Learner path",
+      "score": 44,
+      "trend": "Ready",
+      "updated": "213 min ago",
+      "demoSeed": true
+    },
+    {
+      "id": "learnloop-43",
+      "title": "Quiz checkpoint branch #043",
+      "status": "Confidence prompts",
+      "owner": "Cohort dashboard",
+      "score": 51,
+      "trend": "High attention",
+      "updated": "218 min ago",
+      "demoSeed": true
+    },
+    {
+      "id": "learnloop-44",
+      "title": "Confidence dip #044",
+      "status": "Cohort insights",
+      "owner": "Recommendation lab",
+      "score": 58,
+      "trend": "In progress",
+      "updated": "223 min ago",
+      "demoSeed": true
+    },
+    {
+      "id": "learnloop-45",
+      "title": "Next lesson suggested #045",
+      "status": "Objective mapping",
+      "owner": "Course builder",
+      "score": 65,
+      "trend": "Ready",
+      "updated": "228 min ago",
+      "demoSeed": true
+    },
+    {
+      "id": "learnloop-46",
+      "title": "Quiz checkpoint branch #046",
+      "status": "Adaptive checkpoints",
+      "owner": "Learner path",
+      "score": 72,
+      "trend": "High attention",
+      "updated": "233 min ago",
+      "demoSeed": true
+    },
+    {
+      "id": "learnloop-47",
+      "title": "Confidence dip #047",
+      "status": "Confidence prompts",
+      "owner": "Cohort dashboard",
+      "score": 79,
+      "trend": "In progress",
+      "updated": "238 min ago",
+      "demoSeed": true
+    },
+    {
+      "id": "learnloop-48",
+      "title": "Next lesson suggested #048",
+      "status": "Cohort insights",
+      "owner": "Recommendation lab",
+      "score": 86,
+      "trend": "Ready",
+      "updated": "243 min ago",
+      "demoSeed": true
+    },
+    {
+      "id": "learnloop-49",
+      "title": "Quiz checkpoint branch #049",
+      "status": "Objective mapping",
+      "owner": "Course builder",
+      "score": 93,
+      "trend": "High attention",
+      "updated": "248 min ago",
+      "demoSeed": true
+    },
+    {
+      "id": "learnloop-50",
+      "title": "Confidence dip #050",
+      "status": "Adaptive checkpoints",
+      "owner": "Learner path",
+      "score": 43,
+      "trend": "In progress",
+      "updated": "253 min ago",
+      "demoSeed": true
+    },
+    {
+      "id": "learnloop-51",
+      "title": "Next lesson suggested #051",
+      "status": "Confidence prompts",
+      "owner": "Cohort dashboard",
+      "score": 50,
+      "trend": "Ready",
+      "updated": "258 min ago",
+      "demoSeed": true
+    },
+    {
+      "id": "learnloop-52",
+      "title": "Quiz checkpoint branch #052",
+      "status": "Cohort insights",
+      "owner": "Recommendation lab",
+      "score": 57,
+      "trend": "High attention",
+      "updated": "263 min ago",
+      "demoSeed": true
+    },
+    {
+      "id": "learnloop-53",
+      "title": "Confidence dip #053",
+      "status": "Objective mapping",
+      "owner": "Course builder",
+      "score": 64,
+      "trend": "In progress",
+      "updated": "268 min ago",
+      "demoSeed": true
+    },
+    {
+      "id": "learnloop-54",
+      "title": "Next lesson suggested #054",
+      "status": "Adaptive checkpoints",
+      "owner": "Learner path",
+      "score": 71,
+      "trend": "Ready",
+      "updated": "273 min ago",
+      "demoSeed": true
+    },
+    {
+      "id": "learnloop-55",
+      "title": "Quiz checkpoint branch #055",
+      "status": "Confidence prompts",
+      "owner": "Cohort dashboard",
+      "score": 78,
+      "trend": "High attention",
+      "updated": "278 min ago",
+      "demoSeed": true
+    },
+    {
+      "id": "learnloop-56",
+      "title": "Confidence dip #056",
+      "status": "Cohort insights",
+      "owner": "Recommendation lab",
+      "score": 85,
+      "trend": "In progress",
+      "updated": "283 min ago",
+      "demoSeed": true
+    },
+    {
+      "id": "learnloop-57",
+      "title": "Next lesson suggested #057",
+      "status": "Objective mapping",
+      "owner": "Course builder",
+      "score": 92,
+      "trend": "Ready",
+      "updated": "288 min ago",
+      "demoSeed": true
+    },
+    {
+      "id": "learnloop-58",
+      "title": "Quiz checkpoint branch #058",
+      "status": "Adaptive checkpoints",
+      "owner": "Learner path",
+      "score": 42,
+      "trend": "High attention",
+      "updated": "293 min ago",
+      "demoSeed": true
+    },
+    {
+      "id": "learnloop-59",
+      "title": "Confidence dip #059",
+      "status": "Confidence prompts",
+      "owner": "Cohort dashboard",
+      "score": 49,
+      "trend": "In progress",
+      "updated": "298 min ago",
+      "demoSeed": true
+    },
+    {
+      "id": "learnloop-60",
+      "title": "Next lesson suggested #060",
+      "status": "Cohort insights",
+      "owner": "Recommendation lab",
+      "score": 56,
+      "trend": "Ready",
+      "updated": "303 min ago",
+      "demoSeed": true
+    },
+    {
+      "id": "learnloop-61",
+      "title": "Quiz checkpoint branch #061",
+      "status": "Objective mapping",
+      "owner": "Course builder",
+      "score": 63,
+      "trend": "High attention",
+      "updated": "308 min ago",
+      "demoSeed": true
+    },
+    {
+      "id": "learnloop-62",
+      "title": "Confidence dip #062",
+      "status": "Adaptive checkpoints",
+      "owner": "Learner path",
+      "score": 70,
+      "trend": "In progress",
+      "updated": "313 min ago",
+      "demoSeed": true
+    },
+    {
+      "id": "learnloop-63",
+      "title": "Next lesson suggested #063",
+      "status": "Confidence prompts",
+      "owner": "Cohort dashboard",
+      "score": 77,
+      "trend": "Ready",
+      "updated": "318 min ago",
+      "demoSeed": true
+    },
+    {
+      "id": "learnloop-64",
+      "title": "Quiz checkpoint branch #064",
+      "status": "Cohort insights",
+      "owner": "Recommendation lab",
+      "score": 84,
+      "trend": "High attention",
+      "updated": "323 min ago",
+      "demoSeed": true
+    },
+    {
+      "id": "learnloop-65",
+      "title": "Confidence dip #065",
+      "status": "Objective mapping",
+      "owner": "Course builder",
+      "score": 91,
+      "trend": "In progress",
+      "updated": "328 min ago",
+      "demoSeed": true
+    },
+    {
+      "id": "learnloop-66",
+      "title": "Next lesson suggested #066",
+      "status": "Adaptive checkpoints",
+      "owner": "Learner path",
+      "score": 98,
+      "trend": "Ready",
+      "updated": "333 min ago",
+      "demoSeed": true
+    },
+    {
+      "id": "learnloop-67",
+      "title": "Quiz checkpoint branch #067",
+      "status": "Confidence prompts",
+      "owner": "Cohort dashboard",
+      "score": 48,
+      "trend": "High attention",
+      "updated": "338 min ago",
+      "demoSeed": true
+    },
+    {
+      "id": "learnloop-68",
+      "title": "Confidence dip #068",
+      "status": "Cohort insights",
+      "owner": "Recommendation lab",
+      "score": 55,
+      "trend": "In progress",
+      "updated": "343 min ago",
+      "demoSeed": true
+    },
+    {
+      "id": "learnloop-69",
+      "title": "Next lesson suggested #069",
+      "status": "Objective mapping",
+      "owner": "Course builder",
+      "score": 62,
+      "trend": "Ready",
+      "updated": "348 min ago",
+      "demoSeed": true
+    },
+    {
+      "id": "learnloop-70",
+      "title": "Quiz checkpoint branch #070",
+      "status": "Adaptive checkpoints",
+      "owner": "Learner path",
+      "score": 69,
+      "trend": "High attention",
+      "updated": "353 min ago",
+      "demoSeed": true
+    },
+    {
+      "id": "learnloop-71",
+      "title": "Confidence dip #071",
+      "status": "Confidence prompts",
+      "owner": "Cohort dashboard",
+      "score": 76,
+      "trend": "In progress",
+      "updated": "358 min ago",
+      "demoSeed": true
+    },
+    {
+      "id": "learnloop-72",
+      "title": "Next lesson suggested #072",
+      "status": "Cohort insights",
+      "owner": "Recommendation lab",
+      "score": 83,
+      "trend": "Ready",
+      "updated": "363 min ago",
+      "demoSeed": true
+    },
+    {
+      "id": "learnloop-73",
+      "title": "Quiz checkpoint branch #073",
+      "status": "Objective mapping",
+      "owner": "Course builder",
+      "score": 90,
+      "trend": "High attention",
+      "updated": "368 min ago",
+      "demoSeed": true
+    },
+    {
+      "id": "learnloop-74",
+      "title": "Confidence dip #074",
+      "status": "Adaptive checkpoints",
+      "owner": "Learner path",
+      "score": 97,
+      "trend": "In progress",
+      "updated": "373 min ago",
+      "demoSeed": true
+    },
+    {
+      "id": "learnloop-75",
+      "title": "Next lesson suggested #075",
+      "status": "Confidence prompts",
+      "owner": "Cohort dashboard",
+      "score": 47,
+      "trend": "Ready",
+      "updated": "378 min ago",
+      "demoSeed": true
+    },
+    {
+      "id": "learnloop-76",
+      "title": "Quiz checkpoint branch #076",
+      "status": "Cohort insights",
+      "owner": "Recommendation lab",
+      "score": 54,
+      "trend": "High attention",
+      "updated": "383 min ago",
+      "demoSeed": true
+    },
+    {
+      "id": "learnloop-77",
+      "title": "Confidence dip #077",
+      "status": "Objective mapping",
+      "owner": "Course builder",
+      "score": 61,
+      "trend": "In progress",
+      "updated": "388 min ago",
+      "demoSeed": true
+    },
+    {
+      "id": "learnloop-78",
+      "title": "Next lesson suggested #078",
+      "status": "Adaptive checkpoints",
+      "owner": "Learner path",
+      "score": 68,
+      "trend": "Ready",
+      "updated": "393 min ago",
+      "demoSeed": true
+    },
+    {
+      "id": "learnloop-79",
+      "title": "Quiz checkpoint branch #079",
+      "status": "Confidence prompts",
+      "owner": "Cohort dashboard",
+      "score": 75,
+      "trend": "High attention",
+      "updated": "398 min ago",
+      "demoSeed": true
+    },
+    {
+      "id": "learnloop-80",
+      "title": "Confidence dip #080",
+      "status": "Cohort insights",
+      "owner": "Recommendation lab",
+      "score": 82,
+      "trend": "In progress",
+      "updated": "403 min ago",
+      "demoSeed": true
+    },
+    {
+      "id": "learnloop-81",
+      "title": "Next lesson suggested #081",
+      "status": "Objective mapping",
+      "owner": "Course builder",
+      "score": 89,
+      "trend": "Ready",
+      "updated": "408 min ago",
+      "demoSeed": true
+    },
+    {
+      "id": "learnloop-82",
+      "title": "Quiz checkpoint branch #082",
+      "status": "Adaptive checkpoints",
+      "owner": "Learner path",
+      "score": 96,
+      "trend": "High attention",
+      "updated": "413 min ago",
+      "demoSeed": true
+    },
+    {
+      "id": "learnloop-83",
+      "title": "Confidence dip #083",
+      "status": "Confidence prompts",
+      "owner": "Cohort dashboard",
+      "score": 46,
+      "trend": "In progress",
+      "updated": "418 min ago",
+      "demoSeed": true
+    },
+    {
+      "id": "learnloop-84",
+      "title": "Next lesson suggested #084",
+      "status": "Cohort insights",
+      "owner": "Recommendation lab",
+      "score": 53,
+      "trend": "Ready",
+      "updated": "423 min ago",
+      "demoSeed": true
+    },
+    {
+      "id": "learnloop-85",
+      "title": "Quiz checkpoint branch #085",
+      "status": "Objective mapping",
+      "owner": "Course builder",
+      "score": 60,
+      "trend": "High attention",
+      "updated": "428 min ago",
+      "demoSeed": true
+    },
+    {
+      "id": "learnloop-86",
+      "title": "Confidence dip #086",
+      "status": "Adaptive checkpoints",
+      "owner": "Learner path",
+      "score": 67,
+      "trend": "In progress",
+      "updated": "433 min ago",
+      "demoSeed": true
+    },
+    {
+      "id": "learnloop-87",
+      "title": "Next lesson suggested #087",
+      "status": "Confidence prompts",
+      "owner": "Cohort dashboard",
+      "score": 74,
+      "trend": "Ready",
+      "updated": "438 min ago",
+      "demoSeed": true
+    },
+    {
+      "id": "learnloop-88",
+      "title": "Quiz checkpoint branch #088",
+      "status": "Cohort insights",
+      "owner": "Recommendation lab",
+      "score": 81,
+      "trend": "High attention",
+      "updated": "443 min ago",
+      "demoSeed": true
+    },
+    {
+      "id": "learnloop-89",
+      "title": "Confidence dip #089",
+      "status": "Objective mapping",
+      "owner": "Course builder",
+      "score": 88,
+      "trend": "In progress",
+      "updated": "448 min ago",
+      "demoSeed": true
+    },
+    {
+      "id": "learnloop-90",
+      "title": "Next lesson suggested #090",
+      "status": "Adaptive checkpoints",
+      "owner": "Learner path",
+      "score": 95,
+      "trend": "Ready",
+      "updated": "453 min ago",
+      "demoSeed": true
+    },
+    {
+      "id": "learnloop-91",
+      "title": "Quiz checkpoint branch #091",
+      "status": "Confidence prompts",
+      "owner": "Cohort dashboard",
+      "score": 45,
+      "trend": "High attention",
+      "updated": "458 min ago",
+      "demoSeed": true
+    },
+    {
+      "id": "learnloop-92",
+      "title": "Confidence dip #092",
+      "status": "Cohort insights",
+      "owner": "Recommendation lab",
+      "score": 52,
+      "trend": "In progress",
+      "updated": "463 min ago",
+      "demoSeed": true
+    },
+    {
+      "id": "learnloop-93",
+      "title": "Next lesson suggested #093",
+      "status": "Objective mapping",
+      "owner": "Course builder",
+      "score": 59,
+      "trend": "Ready",
+      "updated": "468 min ago",
+      "demoSeed": true
+    },
+    {
+      "id": "learnloop-94",
+      "title": "Quiz checkpoint branch #094",
+      "status": "Adaptive checkpoints",
+      "owner": "Learner path",
+      "score": 66,
+      "trend": "High attention",
+      "updated": "473 min ago",
+      "demoSeed": true
+    },
+    {
+      "id": "learnloop-95",
+      "title": "Confidence dip #095",
+      "status": "Confidence prompts",
+      "owner": "Cohort dashboard",
+      "score": 73,
+      "trend": "In progress",
+      "updated": "478 min ago",
+      "demoSeed": true
+    },
+    {
+      "id": "learnloop-96",
+      "title": "Next lesson suggested #096",
+      "status": "Cohort insights",
+      "owner": "Recommendation lab",
+      "score": 80,
+      "trend": "Ready",
+      "updated": "483 min ago",
+      "demoSeed": true
+    },
+    {
+      "id": "learnloop-97",
+      "title": "Quiz checkpoint branch #097",
+      "status": "Objective mapping",
+      "owner": "Course builder",
+      "score": 87,
+      "trend": "High attention",
+      "updated": "488 min ago",
+      "demoSeed": true
+    },
+    {
+      "id": "learnloop-98",
+      "title": "Confidence dip #098",
+      "status": "Adaptive checkpoints",
+      "owner": "Learner path",
+      "score": 94,
+      "trend": "In progress",
+      "updated": "493 min ago",
+      "demoSeed": true
+    },
+    {
+      "id": "learnloop-99",
+      "title": "Next lesson suggested #099",
+      "status": "Confidence prompts",
+      "owner": "Cohort dashboard",
+      "score": 44,
+      "trend": "Ready",
+      "updated": "498 min ago",
+      "demoSeed": true
+    },
+    {
+      "id": "learnloop-100",
+      "title": "Quiz checkpoint branch #100",
+      "status": "Cohort insights",
+      "owner": "Recommendation lab",
+      "score": 51,
+      "trend": "High attention",
+      "updated": "503 min ago",
+      "demoSeed": true
     }
   ],
   "workflow": [
