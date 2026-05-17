@@ -1,0 +1,96 @@
+{
+  "product": "LearnLoop",
+  "category": "Adaptive Course Builder",
+  "backend": "GitHub Pages static JSON endpoint plus localStorage write simulation.",
+  "generatedBy": "Simone Govender",
+  "metrics": [
+    {
+      "label": "Recommended path",
+      "value": "86%",
+      "delta": "+12%"
+    },
+    {
+      "label": "Active records",
+      "value": "7",
+      "delta": "+3"
+    },
+    {
+      "label": "Workflow steps",
+      "value": "4",
+      "delta": "mapped"
+    },
+    {
+      "label": "Local saves",
+      "value": "on",
+      "delta": "browser"
+    }
+  ],
+  "records": [
+    {
+      "id": "learnloop-1",
+      "title": "Quiz checkpoint branch",
+      "status": "Objective mapping",
+      "owner": "Course builder",
+      "score": 92,
+      "trend": "High attention",
+      "updated": "8 min ago"
+    },
+    {
+      "id": "learnloop-2",
+      "title": "Confidence dip",
+      "status": "Adaptive checkpoints",
+      "owner": "Learner path",
+      "score": 80,
+      "trend": "In progress",
+      "updated": "19 min ago"
+    },
+    {
+      "id": "learnloop-3",
+      "title": "Next lesson suggested",
+      "status": "Confidence prompts",
+      "owner": "Cohort dashboard",
+      "score": 68,
+      "trend": "Ready",
+      "updated": "30 min ago"
+    }
+  ],
+  "workflow": [
+    {
+      "step": 1,
+      "title": "Objective mapping",
+      "detail": "LearnLoop uses objective mapping to support course builder decisions for trainers, educators, and learning teams."
+    },
+    {
+      "step": 2,
+      "title": "Adaptive checkpoints",
+      "detail": "LearnLoop uses adaptive checkpoints to support learner path decisions for trainers, educators, and learning teams."
+    },
+    {
+      "step": 3,
+      "title": "Confidence prompts",
+      "detail": "LearnLoop uses confidence prompts to support cohort dashboard decisions for trainers, educators, and learning teams."
+    },
+    {
+      "step": 4,
+      "title": "Cohort insights",
+      "detail": "LearnLoop uses cohort insights to support recommendation lab decisions for trainers, educators, and learning teams."
+    }
+  ],
+  "activity": [
+    {
+      "title": "Help instructors design adaptive paths",
+      "time": "1h",
+      "kind": "Objective mapping"
+    },
+    {
+      "title": "Balance scores with learner confidence",
+      "time": "2h",
+      "kind": "Adaptive checkpoints"
+    },
+    {
+      "title": "Show cohort patterns clearly",
+      "time": "3h",
+      "kind": "Confidence prompts"
+    }
+  ]
+}
