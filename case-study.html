@@ -1,31 +1,47 @@
-<!doctype html><html lang="en"><head>
+<!doctype html>
+<html lang="en">
+<head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Case Study | LearnLoop</title>
-  <meta name="description" content="LearnLoop product design case study." />
+  <meta name="description" content="LearnLoop product design case study for adaptive learning, study labs, and resource-guided practice." />
   <link rel="icon" href="assets/logo.svg" type="image/svg+xml" />
   <link rel="stylesheet" href="assets/styles.css" />
-  <style>:root{--brand:#7c3aed;--accent:#f59e0b;--second:#14b8a6;--soft:#f5f3ff;--dark:#21143d}</style>
-</head><body><header class="topbar">
-  <a class="brand" href="index.html"><img src="assets/logo.svg" alt="LearnLoop logo" /><span><strong>LearnLoop</strong><small>Adaptive Course Builder</small></span></a>
-  <nav aria-label="LearnLoop navigation">
-    <a href="index.html">Home</a>
-    <a href="product.html">Product</a>
-    <a href="workspace.html">Workspace</a>
-    <a href="case-study.html">Case Study</a>
-    <a href="demo.html">Demo</a>
-  </nav>
-  <button class="theme-toggle" type="button" data-theme-toggle>Dark</button>
-</header><main><section class="hero">
-  <div class="hero-copy">
-    <p class="eyebrow">Case study</p>
-    <h1>LearnLoop product design case study.</h1>
-    <p class="lead">A portfolio case study for trainers, educators, and learning teams, showing problem framing, UX decisions, implementation logic, and data-backed interaction design.</p>
-    <div class="hero-actions"><a class="button primary" href="workspace.html">Open workspace</a><a class="button secondary" href="demo.html">Try demo</a></div>
-    <p class="notice">A Quantum Cupcake Creation (Simoné Govender) Front end, JSON data layer, and local browser persistence.</p>
-  </div>
-  <aside class="product-stage" aria-label="LearnLoop live preview">
-    <div class="stage-top"><span></span><span></span><span></span><strong data-live-status>Loading data</strong></div>
-    <div class="stage-body"><img src="assets/preview.svg" alt="LearnLoop interface preview" /><div class="live-panel" data-live-panel></div></div>
-  </aside>
-</section><section class="section"><div class="case-grid"><article class="panel"><p class="eyebrow">Problem</p><h3>Help instructors design adaptive paths</h3><p>Objective mapping supports this by turning a messy workflow into a visible product state.</p></article><article class="panel"><p class="eyebrow">UX move</p><h3>Balance scores with learner confidence</h3><p>Adaptive checkpoints supports this by turning a messy workflow into a visible product state.</p></article><article class="panel"><p class="eyebrow">Outcome</p><h3>Show cohort patterns clearly</h3><p>Confidence prompts supports this by turning a messy workflow into a visible product state.</p></article></div></section><section class="section"><div class="section-heading"><p class="eyebrow">Live workspace</p><h2>LearnLoop dashboard.</h2><p>Fetched KPI cards, filterable records, workflow rules, and a visual score chart render from the JSON endpoint.</p></div><div class="kpi-grid" data-kpis></div><div class="workspace-grid"><article class="panel"><div class="panel-head"><div><p class="eyebrow">Records</p><h3>Operational queue</h3></div><input class="inline-search" data-record-search placeholder="Filter records" /></div><div class="record-list" data-records></div></article><article class="panel"><p class="eyebrow">Score shape</p><h3>Priority chart</h3><div class="chart" data-chart></div></article><article class="panel wide"><p class="eyebrow">Workflow</p><h3>Product rules</h3><div class="workflow-list" data-workflow></div></article></div></section></main><footer><img src="assets/logo.svg" alt="" aria-hidden="true" /><p><strong>LearnLoop</strong><br/>A Quantum Cupcake Creation (Simoné Govender) Standalone GitHub Pages product site with front-end UI, JSON data layer, and local persistence.</p></footer><script>window.SITE_CONFIG={"slug":"learnloop","name":"LearnLoop","category":"Adaptive Course Builder","audience":"trainers, educators, and learning teams","tone":"curious and structured","brand":"#7c3aed","accent":"#f59e0b","second":"#14b8a6","soft":"#f5f3ff","dark":"#21143d","symbol":"path","tagline":"Adaptive learning without intimidating instructors.","summary":"LearnLoop lets trainers build objective-led paths, checkpoints, learner confidence prompts, and cohort insights.","features":["Objective mapping","Adaptive checkpoints","Confidence prompts","Cohort insights"],"pages":["Course builder","Learner path","Cohort dashboard","Recommendation lab"],"demo":{"label":"Path Recommender","fields":["Quiz score","Confidence","Time available"],"result":"Recommended path","outcomes":["Coach","Practice","Advance"]},"records":["Quiz checkpoint branch","Confidence dip","Next lesson suggested"],"caseStudy":["Help instructors design adaptive paths","Balance scores with learner confidence","Show cohort patterns clearly"]};</script><script src="assets/app.js"></script></body></html>
+</head>
+<body data-page="case-study">
+  <header class="app-header">
+    <a class="brand" href="index.html"><img src="assets/logo.svg" alt="" /><span><strong>LearnLoop</strong><small>Adaptive Learning Studio</small></span></a>
+    <nav aria-label="LearnLoop navigation"><a href="index.html">Studio</a><a href="product.html">Builder</a><a href="workspace.html">Study Path</a><a href="resources.html">Resources</a><a href="demo.html">Practice Lab</a><a href="database.html">Database</a><a href="case-study.html">Case Study</a></nav>
+    <div class="header-actions"><span data-session-pill>Guest learner</span><a class="nav-button" href="login.html">Login</a><button class="nav-button" type="button" data-theme-toggle>Dark</button></div>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <p class="eyebrow">Product design case study</p>
+      <h1>Designing an adaptive learning app that balances score, confidence, and practice.</h1>
+      <p>LearnLoop was framed around a simple product question: how can a learner know what to study next without feeling judged or lost?</p>
+    </section>
+
+    <section class="section story-ribbon">
+      <article><span>Problem</span><h2>Learners had content, but no useful sense of priority, confidence, or next action.</h2></article>
+      <article><span>UX strategy</span><h2>Combine quiz signals, self-confidence, and available time into a visible study path.</h2></article>
+      <article><span>Outcome</span><h2>A standalone learning app with labs, resources, login, database actions, backend routes, and 300 seeded records.</h2></article>
+    </section>
+
+    <section class="section research-wall">
+      <div>
+        <p class="eyebrow">Design moves</p>
+        <h2>Make practice feel like guidance, not correction.</h2>
+      </div>
+      <div class="research-notes">
+        <article><b>01</b><strong>Confidence is a signal</strong><p>Low confidence routes a learner to coaching even when quiz scores look acceptable.</p></article>
+        <article><b>02</b><strong>Resources stay contextual</strong><p>Worksheets, concept explainers, and quick videos are linked to the next practice task.</p></article>
+        <article><b>03</b><strong>Progress is visible</strong><p>The dashboard shows readiness, review loops, and the reason behind the recommendation.</p></article>
+      </div>
+    </section>
+  </main>
+
+  <footer><img src="assets/logo.svg" alt="" /><p><strong>LearnLoop</strong><br />A Quantum Cupcake Creation (Simoné Govender)</p></footer>
+  <script src="assets/app.js"></script>
+</body>
+</html>

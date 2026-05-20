@@ -1,0 +1,20 @@
+{
+  "product": "LearnLoop",
+  "mode": "Demo authentication for portfolio use only.",
+  "users": [
+    {
+      "id": "u-1",
+      "name": "Simone Govender",
+      "email": "simone@learnloop.demo",
+      "password": "demo123",
+      "role": "Student product designer"
+    },
+    {
+      "id": "u-2",
+      "name": "Course Coach",
+      "email": "coach@learnloop.demo",
+      "password": "study123",
+      "role": "Learning coach"
+    }
+  ]
+}

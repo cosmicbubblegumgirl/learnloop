@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Login | LearnLoop</title>
+  <meta name="description" content="LearnLoop demo login for learner and instructor app flows." />
+  <link rel="icon" href="assets/logo.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="assets/styles.css" />
+</head>
+<body data-page="login">
+  <header class="app-header">
+    <a class="brand" href="index.html"><img src="assets/logo.svg" alt="" /><span><strong>LearnLoop</strong><small>Adaptive Learning Studio</small></span></a>
+    <nav aria-label="LearnLoop navigation"><a href="index.html">Studio</a><a href="product.html">Builder</a><a href="workspace.html">Study Path</a><a href="resources.html">Resources</a><a href="demo.html">Practice Lab</a><a href="database.html">Database</a><a href="case-study.html">Case Study</a></nav>
+    <div class="header-actions"><span data-session-pill>Guest learner</span><a class="nav-button" href="login.html">Login</a><button class="nav-button" type="button" data-theme-toggle>Dark</button></div>
+  </header>
+
+  <main>
+    <section class="login-shell">
+      <article class="login-panel">
+        <p class="eyebrow">Demo learning account</p>
+        <h1>Sign in to LearnLoop.</h1>
+        <p>Use a demo account to unlock database edits, save study runs, and personalize the learning path.</p>
+        <form data-login-form>
+          <label>Email<input name="email" type="email" value="simone@learnloop.demo" required /></label>
+          <label>Password<input name="password" type="password" value="demo123" required /></label>
+          <button class="button primary" type="submit">Sign in</button>
+          <p data-login-status></p>
+        </form>
+        <div class="credential-grid">
+          <button type="button" data-demo-user="simone@learnloop.demo" data-demo-password="demo123"><strong>Simone Govender</strong><span>simone@learnloop.demo / demo123</span></button>
+          <button type="button" data-demo-user="coach@learnloop.demo" data-demo-password="study123"><strong>Course Coach</strong><span>coach@learnloop.demo / study123</span></button>
+        </div>
+        <button class="button secondary" type="button" data-logout>Clear session</button>
+      </article>
+      <aside class="login-art">
+        <img src="assets/logo.svg" alt="" />
+        <p class="eyebrow">Current session</p>
+        <div data-session-detail>No active session.</div>
+      </aside>
+    </section>
+  </main>
+
+  <footer><img src="assets/logo.svg" alt="" /><p><strong>LearnLoop</strong><br />A Quantum Cupcake Creation (Simoné Govender)</p></footer>
+  <script src="assets/app.js"></script>
+</body>
+</html>

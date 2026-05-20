@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Database | LearnLoop</title>
+  <meta name="description" content="LearnLoop database console with 300 seeded learning records, login-aware edits, search, and JSON export." />
+  <link rel="icon" href="assets/logo.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="assets/styles.css" />
+</head>
+<body data-page="database">
+  <header class="app-header">
+    <a class="brand" href="index.html"><img src="assets/logo.svg" alt="" /><span><strong>LearnLoop</strong><small>Adaptive Learning Studio</small></span></a>
+    <nav aria-label="LearnLoop navigation"><a href="index.html">Studio</a><a href="product.html">Builder</a><a href="workspace.html">Study Path</a><a href="resources.html">Resources</a><a href="demo.html">Practice Lab</a><a href="database.html">Database</a><a href="case-study.html">Case Study</a></nav>
+    <div class="header-actions"><span data-session-pill>Guest learner</span><a class="nav-button" href="login.html">Login</a><button class="nav-button" type="button" data-theme-toggle>Dark</button></div>
+  </header>
+
+  <main>
+    <section class="page-hero compact">
+      <p class="eyebrow">learnloop_learning_records</p>
+      <h1>300 seeded records for learning paths, checkpoints, resources, and study runs.</h1>
+      <p>The published app uses static JSON and browser storage. The local Node backend exposes health, login, and records routes.</p>
+    </section>
+
+    <section class="section database-shell">
+      <div class="auth-warning" data-auth-required>
+        <strong>Demo login required for edits.</strong>
+        <span>Viewing is open. Sign in to create or delete learning records.</span>
+        <a class="button secondary" href="login.html">Login</a>
+      </div>
+      <div class="db-toolbar">
+        <input data-db-search placeholder="Search learning database" />
+        <select data-db-sort>
+          <option value="score">Sort by readiness</option>
+          <option value="title">Sort by title</option>
+          <option value="status">Sort by status</option>
+        </select>
+        <button class="button secondary" type="button" data-db-export>Export JSON</button>
+        <button class="button secondary" type="button" data-db-reset>Reset seed</button>
+      </div>
+      <div class="database-grid">
+        <form class="db-form" data-db-form>
+          <p class="eyebrow">Create learning record</p>
+          <label>Title<input name="title" required placeholder="Concept practice sprint" /></label>
+          <label>Status<select name="status"><option>Objective mapping</option><option>Adaptive checkpoints</option><option>Confidence prompts</option><option>Cohort insights</option><option>Resource review</option><option>Practice lab</option></select></label>
+          <label>Owner<input name="owner" value="Learner path" /></label>
+          <label>Readiness score<input name="score" type="number" min="1" max="100" value="84" /></label>
+          <button class="button primary" type="submit">Save record</button>
+          <p data-db-form-status></p>
+        </form>
+        <article class="db-table-panel">
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>ID</th><th>Learning record</th><th>Status</th><th>Owner</th><th>Score</th><th></th></tr></thead>
+              <tbody data-db-rows></tbody>
+            </table>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer><img src="assets/logo.svg" alt="" /><p><strong>LearnLoop</strong><br />A Quantum Cupcake Creation (Simoné Govender)</p></footer>
+  <script src="assets/app.js"></script>
+</body>
+</html>

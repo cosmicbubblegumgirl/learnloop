@@ -1,8 +1,11 @@
 # LearnLoop
 
-Standalone GitHub Pages product site.
+LearnLoop is a standalone adaptive learning webapp for students.
 
-- Front end: responsive multi-page HTML/CSS/JS interface.
-- Back end layer: `api/data.json` static API contract for GitHub Pages.
-- Dynamic behavior: fetch-rendered KPIs, 100 preloaded demo records, workflow, chart, demo sliders, search, theme toggle, and localStorage saved records.
-- Portfolio attribution: A Quantum Cupcake Creation (Simoné Govender)
+- Created as **A Quantum Cupcake Creation (Simoné Govender)**.
+- Pages: studio, course builder, study path, resources, practice lab, database, login, and case study.
+- Data: 300 preloaded learning records in `api/data.json`.
+- Demo login: `simone@learnloop.demo` / `demo123`.
+- Static backend for GitHub Pages: `api/data.json` and `api/users.json`.
+- Local backend: run `npm start` to use `server/server.js` with `/api/health`, `/api/login`, and `/api/records`.
+- Interactions: flashcards, study timer, resource search, adaptive path recommender, course builder sliders, saved study runs, searchable database, JSON export, theme toggle, and local CRUD-style records.

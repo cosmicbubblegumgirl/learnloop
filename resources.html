@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Resources | LearnLoop</title>
+  <meta name="description" content="LearnLoop interactive learning resources with concept guides, practice worksheets, reflection prompts, and study timers." />
+  <link rel="icon" href="assets/logo.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="assets/styles.css" />
+</head>
+<body data-page="resources">
+  <header class="app-header">
+    <a class="brand" href="index.html"><img src="assets/logo.svg" alt="" /><span><strong>LearnLoop</strong><small>Adaptive Learning Studio</small></span></a>
+    <nav aria-label="LearnLoop navigation"><a href="index.html">Studio</a><a href="product.html">Builder</a><a href="workspace.html">Study Path</a><a href="resources.html">Resources</a><a href="demo.html">Practice Lab</a><a href="database.html">Database</a><a href="case-study.html">Case Study</a></nav>
+    <div class="header-actions"><span data-session-pill>Guest learner</span><a class="nav-button" href="login.html">Login</a><button class="nav-button" type="button" data-theme-toggle>Dark</button></div>
+  </header>
+
+  <main>
+    <section class="page-hero compact">
+      <p class="eyebrow">Interactive resource library</p>
+      <h1>Practice material is organized by what the learner needs next.</h1>
+      <p>Filter guides, worksheets, drills, and reflection prompts. Start a study timer or save a resource to your local learning shelf.</p>
+    </section>
+
+    <section class="section resource-lab">
+      <aside class="resource-tools">
+        <p class="eyebrow">Study timer</p>
+        <div class="timer-face"><strong data-timer-display>15:00</strong><span>focus sprint</span></div>
+        <div class="mini-actions">
+          <button class="button primary" type="button" data-timer-start>Start</button>
+          <button class="button secondary" type="button" data-timer-reset>Reset</button>
+        </div>
+        <label>Resource filter<input data-resource-search placeholder="Search resources" /></label>
+        <article class="shelf-card">
+          <p class="eyebrow">Saved shelf</p>
+          <div data-resource-shelf></div>
+          <button class="button secondary" type="button" data-shelf-clear>Clear shelf</button>
+        </article>
+      </aside>
+      <section>
+        <div class="resource-grid" data-resources></div>
+      </section>
+    </section>
+  </main>
+
+  <footer><img src="assets/logo.svg" alt="" /><p><strong>LearnLoop</strong><br />A Quantum Cupcake Creation (Simoné Govender)</p></footer>
+  <script src="assets/app.js"></script>
+</body>
+</html>
