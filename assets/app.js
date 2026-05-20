@@ -301,6 +301,42 @@ function renderShelf() {
 }
 
 let cardIndex = 0;
+let deferredInstallPrompt = null;
+
+function setInstallStatus(message) {
+  $$("[data-install-status]").forEach((target) => {
+    target.textContent = message;
+  });
+}
+
+function setupMobileInstall() {
+  if ("serviceWorker" in navigator && location.protocol.startsWith("http")) {
+    navigator.serviceWorker.register("sw.js").catch(() => {});
+  }
+
+  window.addEventListener("beforeinstallprompt", (event) => {
+    event.preventDefault();
+    deferredInstallPrompt = event;
+    setInstallStatus("LearnLoop is ready to install on this device.");
+  });
+
+  $$("[data-install-app]").forEach((button) => {
+    button.addEventListener("click", async () => {
+      if (!deferredInstallPrompt) {
+        setInstallStatus("If no install prompt appears, open this link in Chrome on Android or Safari on Apple and add it to your home screen.");
+        return;
+      }
+      deferredInstallPrompt.prompt();
+      const choice = await deferredInstallPrompt.userChoice;
+      setInstallStatus(choice.outcome === "accepted" ? "LearnLoop was added as a mobile app." : "Install was dismissed. You can try again from this page.");
+      deferredInstallPrompt = null;
+    });
+  });
+
+  const standalone = window.matchMedia?.("(display-mode: standalone)")?.matches || navigator.standalone;
+  if (standalone) setInstallStatus("LearnLoop is running in mobile app mode.");
+}
+
 function renderFlashcard() {
   const card = LEARN_LOOP.flashcards[cardIndex];
   if ($("[data-card-front]")) $("[data-card-front]").textContent = card.front;
@@ -553,6 +589,7 @@ async function init() {
   renderSession();
   setupLogin();
   setupClock();
+  setupMobileInstall();
   renderBuilder();
 
   try {
