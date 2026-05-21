@@ -201,7 +201,21 @@ p { color: var(--muted); line-height: 1.65; }
 .research-notes article,
 .auth-warning,
 .install-card,
-.install-hero {
+.install-hero,
+.course-sidebar,
+.course-card,
+.lesson-playlist,
+.lesson-stage,
+.note-panel,
+.dashboard-panel,
+.assignment-card,
+.quiz-form,
+.quiz-history,
+.discussion-board,
+.discussion-form,
+.discussion-post,
+.groups-panel,
+.announcement-card {
   border: 1px solid var(--line);
   border-radius: 12px;
   background: color-mix(in srgb, var(--panel) 95%, transparent);
@@ -504,7 +518,10 @@ progress {
 .practice-controls,
 .db-form,
 .login-panel form,
-.resource-tools {
+.resource-tools,
+.note-panel form,
+.discussion-form,
+.quiz-form {
   display: grid;
   gap: 14px;
 }
@@ -513,7 +530,10 @@ progress {
 .practice-controls label,
 .db-form label,
 .login-panel label,
-.resource-tools label {
+.resource-tools label,
+.note-panel label,
+.discussion-form label,
+.quiz-question label {
   display: grid;
   gap: 8px;
   color: var(--muted);
@@ -521,7 +541,8 @@ progress {
 }
 
 input,
-select {
+select,
+textarea {
   width: 100%;
   min-height: 44px;
   padding: 11px 12px;
@@ -530,6 +551,11 @@ select {
   color: var(--ink);
   background: color-mix(in srgb, var(--panel) 92%, transparent);
   font: inherit;
+}
+
+textarea {
+  min-height: 118px;
+  resize: vertical;
 }
 
 input[type="range"] { accent-color: var(--mint); }
@@ -861,6 +887,280 @@ td button {
   cursor: pointer;
 }
 
+.course-shell,
+.lesson-shell,
+.community-shell,
+.quiz-shell {
+  display: grid;
+  gap: 18px;
+  align-items: start;
+}
+
+.course-shell {
+  grid-template-columns: 310px minmax(0, 1fr);
+}
+
+.course-sidebar,
+.course-card,
+.lesson-playlist,
+.lesson-stage,
+.note-panel,
+.dashboard-panel,
+.quiz-form,
+.quiz-history,
+.discussion-board,
+.groups-panel {
+  padding: 18px;
+}
+
+.course-toolbar {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 180px 180px;
+  gap: 10px;
+  margin-bottom: 14px;
+}
+
+.course-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.course-card {
+  display: grid;
+  gap: 12px;
+  min-height: 330px;
+}
+
+.course-top,
+.course-meta,
+.course-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+}
+
+.course-top {
+  justify-content: space-between;
+}
+
+.course-top span,
+.course-meta span,
+.certificate-card span,
+.install-card span,
+.discussion-post span,
+.announcement-card span {
+  width: fit-content;
+  padding: 6px 10px;
+  border-radius: 999px;
+  color: #fff;
+  background: var(--navy);
+  font-size: .74rem;
+  font-weight: 950;
+  text-transform: uppercase;
+}
+
+.course-top small,
+.course-meta span {
+  color: var(--muted);
+  font-weight: 850;
+}
+
+.mini-course,
+.certificate-card,
+.notes-list article,
+.study-group {
+  display: grid;
+  gap: 8px;
+  padding: 12px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: color-mix(in srgb, var(--mint) 10%, var(--panel));
+}
+
+.course-sidebar > div,
+.lesson-playlist > div,
+.notes-list,
+.groups-panel > div {
+  display: grid;
+  gap: 10px;
+}
+
+.lesson-shell {
+  grid-template-columns: 300px minmax(0, 1fr) 320px;
+}
+
+.lesson-playlist button {
+  display: grid;
+  gap: 5px;
+  width: 100%;
+  padding: 13px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  color: var(--ink);
+  background: color-mix(in srgb, var(--panel) 90%, transparent);
+  text-align: left;
+  cursor: pointer;
+}
+
+.lesson-playlist button.is-active {
+  color: #fff;
+  background: var(--navy);
+}
+
+.lesson-playlist span,
+.notes-list small,
+.study-group span {
+  color: var(--muted);
+  font-size: .84rem;
+}
+
+.lesson-stage {
+  display: grid;
+  align-content: center;
+  min-height: 560px;
+  color: #fff;
+  background:
+    linear-gradient(90deg, rgba(255,255,255,.08) 1px, transparent 1px),
+    linear-gradient(rgba(255,255,255,.08) 1px, transparent 1px),
+    linear-gradient(135deg, var(--navy), #153e4a 58%, var(--mint));
+  background-size: 38px 38px, 38px 38px, auto;
+}
+
+.lesson-stage h2 {
+  max-width: 760px;
+}
+
+.lesson-stage p {
+  max-width: 720px;
+  color: rgba(255,255,255,.82);
+}
+
+.lesson-stage > span,
+.lesson-checkpoint strong {
+  color: var(--amber);
+  font-weight: 950;
+  text-transform: uppercase;
+}
+
+.lesson-checkpoint {
+  margin: 18px 0;
+  padding: 16px;
+  border: 1px solid rgba(255,255,255,.24);
+  border-radius: 12px;
+  background: rgba(255,255,255,.08);
+}
+
+.platform-dashboard,
+.quiz-platform {
+  display: grid;
+  gap: 18px;
+}
+
+.study-platform-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(260px, .72fr) minmax(260px, .72fr);
+  gap: 16px;
+  align-items: start;
+}
+
+.dashboard-panel > div,
+.quiz-history > div {
+  display: grid;
+  gap: 10px;
+}
+
+.assignment-card {
+  display: grid;
+  gap: 8px;
+  padding: 14px;
+  border-left: 5px solid var(--coral);
+}
+
+.assignment-card.is-complete {
+  border-left-color: var(--mint);
+  opacity: .78;
+}
+
+.assignment-card span,
+.calendar-card span {
+  color: var(--mint);
+  font-weight: 950;
+  text-transform: uppercase;
+}
+
+.calendar-card {
+  display: grid;
+  gap: 6px;
+  padding: 12px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: color-mix(in srgb, var(--amber) 12%, var(--panel));
+}
+
+.metric-grid.compact {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.metric-grid.compact .metric-card {
+  min-height: 130px;
+}
+
+.quiz-shell,
+.community-shell {
+  grid-template-columns: minmax(0, 1fr) 360px;
+}
+
+.quiz-question {
+  display: grid;
+  gap: 10px;
+  margin: 0;
+  padding: 16px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+}
+
+.quiz-question legend {
+  padding: 0 8px;
+  font-weight: 950;
+}
+
+.quiz-question label {
+  display: flex;
+  align-items: center;
+}
+
+.quiz-question input {
+  width: auto;
+  min-height: auto;
+}
+
+.quiz-history article {
+  padding: 12px;
+  border-radius: 12px;
+  background: color-mix(in srgb, var(--blue) 10%, var(--panel));
+}
+
+.discussion-board,
+.discussion-feed,
+.groups-panel {
+  display: grid;
+  gap: 14px;
+}
+
+.discussion-post,
+.announcement-card {
+  display: grid;
+  gap: 8px;
+  padding: 16px;
+}
+
+.study-group strong {
+  color: var(--mint);
+  text-transform: uppercase;
+}
+
 .story-ribbon {
   grid-template-columns: repeat(3, minmax(0, 1fr));
 }
@@ -1073,14 +1373,20 @@ footer p { margin: 0; }
   .database-grid,
   .research-wall,
   .mobile-hero,
-  .mobile-grid {
+  .mobile-grid,
+  .course-shell,
+  .lesson-shell,
+  .study-platform-grid,
+  .quiz-shell,
+  .community-shell {
     grid-template-columns: 1fr;
   }
   .metric-grid,
   .loop-grid,
   .status-timeline,
   .story-ribbon,
-  .resource-grid {
+  .resource-grid,
+  .course-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
@@ -1102,6 +1408,8 @@ footer p { margin: 0; }
   .status-timeline,
   .story-ribbon,
   .resource-grid,
+  .course-grid,
+  .course-toolbar,
   .canvas-flow,
   .db-toolbar {
     grid-template-columns: 1fr;

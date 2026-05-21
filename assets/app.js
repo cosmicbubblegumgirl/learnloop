@@ -21,6 +21,44 @@ const LEARN_LOOP = {
     { front: "Why track confidence?", back: "Confidence reveals when a learner may need coaching even if their score looks strong." },
     { front: "What is active recall?", back: "Practicing retrieval from memory instead of only rereading notes." },
     { front: "What makes a resource useful?", back: "It is connected to a current objective and a practice task." }
+  ],
+  courses: [
+    { id: "course-ux", title: "UX Research Foundations", track: "Design", level: "Beginner", weeks: 4, lessons: 18, progress: 64, instructor: "Mina Patel", outcome: "Plan interviews, map insights, and present research findings.", badge: "Research-ready" },
+    { id: "course-js", title: "JavaScript Study Sprint", track: "Code", level: "Intermediate", weeks: 5, lessons: 24, progress: 42, instructor: "Andre Mills", outcome: "Build interactive interfaces with reliable state and events.", badge: "Frontend builder" },
+    { id: "course-product", title: "Product Design Portfolio Lab", track: "Design", level: "Advanced", weeks: 6, lessons: 30, progress: 78, instructor: "Leah Chen", outcome: "Turn product decisions into polished employer-facing case studies.", badge: "Portfolio polish" },
+    { id: "course-data", title: "Data Literacy for Students", track: "Analytics", level: "Beginner", weeks: 3, lessons: 15, progress: 58, instructor: "Nora Khan", outcome: "Read dashboards, explain trends, and avoid misleading conclusions.", badge: "Data fluent" },
+    { id: "course-exam", title: "Exam Prep Command Center", track: "Study Skills", level: "All levels", weeks: 2, lessons: 12, progress: 86, instructor: "Course Coach", outcome: "Create a review plan with spaced practice and timed attempts.", badge: "Exam-ready" },
+    { id: "course-ai", title: "AI Tools for Learning", track: "Productivity", level: "Intermediate", weeks: 4, lessons: 20, progress: 35, instructor: "Sam Rivera", outcome: "Use AI responsibly for notes, practice prompts, and feedback loops.", badge: "AI study partner" }
+  ],
+  lessons: [
+    { id: "lesson-1", course: "UX Research Foundations", title: "Turn a vague brief into research questions", duration: "11 min", type: "Video", status: "In progress", transcript: "Start with the decision the team needs to make. Write three research questions, then choose the method that produces the clearest evidence.", checkpoint: "Draft three interview questions for a student learning app." },
+    { id: "lesson-2", course: "JavaScript Study Sprint", title: "Event-driven interface patterns", duration: "14 min", type: "Lab", status: "Next", transcript: "Interactive products depend on events, state, and rendering. Keep the state small, name events clearly, and update the interface from one source of truth.", checkpoint: "Build one button that changes saved progress." },
+    { id: "lesson-3", course: "Product Design Portfolio Lab", title: "Write a measurable product outcome", duration: "9 min", type: "Workshop", status: "Saved", transcript: "A strong case study explains the user problem, the design move, and the result. Keep the product outcome specific enough to evaluate.", checkpoint: "Rewrite a project goal as a measurable outcome." },
+    { id: "lesson-4", course: "Exam Prep Command Center", title: "Plan a spaced review cycle", duration: "7 min", type: "Guide", status: "Complete", transcript: "Spaced review works best when practice happens before forgetting is complete. Mix quick recall, error review, and a timed attempt.", checkpoint: "Schedule three review blocks across the next seven days." }
+  ],
+  assignments: [
+    { id: "task-1", title: "Submit concept map", course: "UX Research Foundations", due: "Today", points: 20, status: "Open" },
+    { id: "task-2", title: "Complete JavaScript event lab", course: "JavaScript Study Sprint", due: "Tomorrow", points: 30, status: "Open" },
+    { id: "task-3", title: "Portfolio case-study draft", course: "Product Design Portfolio Lab", due: "Fri", points: 40, status: "Review" },
+    { id: "task-4", title: "Timed exam simulation", course: "Exam Prep Command Center", due: "Mon", points: 25, status: "Open" }
+  ],
+  calendar: [
+    { day: "Mon", title: "Watch lesson", detail: "UX research questions" },
+    { day: "Tue", title: "Practice lab", detail: "JS event state" },
+    { day: "Wed", title: "Discussion", detail: "Portfolio critique" },
+    { day: "Thu", title: "Quiz", detail: "Study strategy check" },
+    { day: "Fri", title: "Submit", detail: "Case study draft" }
+  ],
+  quizQuestions: [
+    { id: "q1", prompt: "Which study action best supports long-term retention?", options: ["Rereading the same notes", "Active recall with spaced practice", "Only highlighting definitions"], answer: 1 },
+    { id: "q2", prompt: "What should an online lesson include after teaching a concept?", options: ["A checkpoint or practice task", "A longer intro", "A hidden progress meter"], answer: 0 },
+    { id: "q3", prompt: "Why does LearnLoop track confidence?", options: ["To replace quiz scores", "To route support when learners feel unsure", "To hide hard topics"], answer: 1 },
+    { id: "q4", prompt: "What makes a course dashboard useful?", options: ["Clear progress, deadlines, and next actions", "Only a list of old lessons", "A generic welcome message"], answer: 0 }
+  ],
+  discussions: [
+    { id: "post-1", author: "Maya", topic: "Study strategy", body: "The timed practice room helped me find which topics I only thought I understood.", replies: 6 },
+    { id: "post-2", author: "Course Coach", topic: "Portfolio Lab", body: "Share one case-study outcome that uses a number, behavior, or clear product signal.", replies: 11 },
+    { id: "post-3", author: "Simone", topic: "UX Research", body: "I am testing whether confidence prompts make the learning path feel more supportive.", replies: 4 }
   ]
 };
 
@@ -29,7 +67,13 @@ const keys = {
   session: "learnloop-session",
   saved: "learnloop-saved-study-runs",
   db: "learnloop-local-db",
-  shelf: "learnloop-resource-shelf"
+  shelf: "learnloop-resource-shelf",
+  enrollments: "learnloop-course-enrollments",
+  completedLessons: "learnloop-completed-lessons",
+  notes: "learnloop-lesson-notes",
+  assignments: "learnloop-assignment-states",
+  quiz: "learnloop-quiz-results",
+  discussions: "learnloop-discussions"
 };
 
 const $ = (selector, root = document) => root.querySelector(selector);
@@ -155,6 +199,37 @@ function setResourceShelf(items) {
   localStorage.setItem(keys.shelf, JSON.stringify(items.slice(0, 8)));
 }
 
+function storedList(key, fallback = []) {
+  try {
+    return JSON.parse(localStorage.getItem(key) || JSON.stringify(fallback));
+  } catch {
+    return fallback;
+  }
+}
+
+function setStoredList(key, items) {
+  localStorage.setItem(key, JSON.stringify(items));
+}
+
+function enrollments() {
+  return storedList(keys.enrollments);
+}
+
+function completedLessons() {
+  return storedList(keys.completedLessons);
+}
+
+function assignmentStates() {
+  return storedList(keys.assignments);
+}
+
+function courseProgress(course) {
+  const enrolled = enrollments().includes(course.id);
+  const completed = completedLessons().filter((id) => LEARN_LOOP.lessons.find((lesson) => lesson.id === id && lesson.course === course.title)).length;
+  const lessonBoost = Math.min(18, completed * 6);
+  return Math.min(100, course.progress + lessonBoost + (enrolled ? 4 : 0));
+}
+
 function localDb() {
   try {
     return JSON.parse(localStorage.getItem(keys.db) || "[]");
@@ -267,6 +342,160 @@ function builderScore() {
   if ($("[data-builder-note]")) $("[data-builder-note]").textContent = score > 78 ? "This path is ready for a student pilot." : score > 55 ? "Add a clearer checkpoint before launch." : "Start by tightening the learning objective.";
 }
 
+function courseCard(course) {
+  const progress = courseProgress(course);
+  const enrolled = enrollments().includes(course.id);
+  return `<article class="course-card">
+    <div class="course-top"><span>${escapeHtml(course.track)}</span><small>${escapeHtml(course.level)}</small></div>
+    <h3>${escapeHtml(course.title)}</h3>
+    <p>${escapeHtml(course.outcome)}</p>
+    <div class="course-meta"><span>${course.weeks} weeks</span><span>${course.lessons} lessons</span><span>${escapeHtml(course.instructor)}</span></div>
+    <progress max="100" value="${progress}"></progress>
+    <div class="course-actions">
+      <button class="button ${enrolled ? "secondary" : "primary"}" type="button" data-enroll-course="${escapeHtml(course.id)}">${enrolled ? "Enrolled" : "Enroll"}</button>
+      <a class="button secondary" href="lesson.html">Open lessons</a>
+    </div>
+  </article>`;
+}
+
+function renderCourses() {
+  const target = $("[data-course-catalog]");
+  if (!target) {
+    renderEnrollments();
+    return;
+  }
+  const query = ($("[data-course-search]")?.value || "").toLowerCase();
+  const track = $("[data-course-track]")?.value || "all";
+  const level = $("[data-course-level]")?.value || "all";
+  const courses = LEARN_LOOP.courses.filter((course) => {
+    const text = `${course.title} ${course.track} ${course.level} ${course.outcome} ${course.instructor}`.toLowerCase();
+    return text.includes(query) && (track === "all" || course.track === track) && (level === "all" || course.level === level);
+  });
+  target.innerHTML = courses.map(courseCard).join("") || "<p>No courses match that filter.</p>";
+  $$("[data-enroll-course]", target).forEach((button) => {
+    button.addEventListener("click", () => {
+      const next = new Set(enrollments());
+      next.add(button.dataset.enrollCourse);
+      setStoredList(keys.enrollments, [...next]);
+      renderCourses();
+      renderEnrollments();
+      renderCertificate();
+    });
+  });
+  renderEnrollments();
+  renderCertificate();
+}
+
+function renderEnrollments() {
+  $$("[data-enrollments]").forEach((target) => {
+    const enrolled = LEARN_LOOP.courses.filter((course) => enrollments().includes(course.id));
+    target.innerHTML = enrolled.length
+      ? enrolled.map((course) => `<article class="mini-course"><strong>${escapeHtml(course.title)}</strong><progress max="100" value="${courseProgress(course)}"></progress><small>${courseProgress(course)}% complete</small></article>`).join("")
+      : "<p>No enrolled courses yet.</p>";
+  });
+}
+
+function renderCertificate() {
+  const target = $("[data-certificate]");
+  if (!target) return;
+  const best = LEARN_LOOP.courses.map((course) => ({ ...course, done: courseProgress(course) })).sort((a, b) => b.done - a.done)[0];
+  target.innerHTML = `<article class="certificate-card">
+    <span>Certificate preview</span>
+    <h3>${escapeHtml(best.badge)}</h3>
+    <p>${best.done >= 90 ? "Ready to issue after final assessment." : `${best.done}% complete. Finish lessons and assignments to unlock.`}</p>
+  </article>`;
+}
+
+function renderLessonRoom() {
+  const player = $("[data-lesson-player]");
+  const list = $("[data-lesson-list]");
+  if (!player || !list) return;
+  const currentId = localStorage.getItem("learnloop-current-lesson") || LEARN_LOOP.lessons[0].id;
+  const lesson = LEARN_LOOP.lessons.find((item) => item.id === currentId) || LEARN_LOOP.lessons[0];
+  const completed = completedLessons();
+  player.innerHTML = `<article class="lesson-stage">
+    <span>${escapeHtml(lesson.type)} - ${escapeHtml(lesson.duration)}</span>
+    <h2>${escapeHtml(lesson.title)}</h2>
+    <p>${escapeHtml(lesson.transcript)}</p>
+    <div class="lesson-checkpoint"><strong>Checkpoint</strong><p>${escapeHtml(lesson.checkpoint)}</p></div>
+    <button class="button primary" type="button" data-complete-lesson="${escapeHtml(lesson.id)}">${completed.includes(lesson.id) ? "Completed" : "Mark lesson complete"}</button>
+  </article>`;
+  list.innerHTML = LEARN_LOOP.lessons.map((item) => `<button class="${item.id === lesson.id ? "is-active" : ""}" type="button" data-open-lesson="${escapeHtml(item.id)}">
+    <strong>${escapeHtml(item.title)}</strong><span>${escapeHtml(item.course)} - ${escapeHtml(item.duration)}</span>
+  </button>`).join("");
+  $$("[data-open-lesson]").forEach((button) => {
+    button.addEventListener("click", () => {
+      localStorage.setItem("learnloop-current-lesson", button.dataset.openLesson);
+      renderLessonRoom();
+      renderNotes();
+    });
+  });
+  $("[data-complete-lesson]")?.addEventListener("click", () => {
+    const next = new Set(completedLessons());
+    next.add(lesson.id);
+    setStoredList(keys.completedLessons, [...next]);
+    renderLessonRoom();
+    renderCourses();
+    renderLearningStats();
+  });
+  renderNotes();
+}
+
+function renderNotes() {
+  const target = $("[data-notes]");
+  if (!target) return;
+  const lessonId = localStorage.getItem("learnloop-current-lesson") || LEARN_LOOP.lessons[0].id;
+  const notes = storedList(keys.notes).filter((note) => note.lessonId === lessonId);
+  target.innerHTML = notes.length
+    ? notes.map((note) => `<article><strong>${escapeHtml(note.title)}</strong><p>${escapeHtml(note.body)}</p><small>${escapeHtml(note.savedAt)}</small></article>`).join("")
+    : "<p>No notes saved for this lesson yet.</p>";
+}
+
+function renderAssignments() {
+  const done = assignmentStates();
+  $$("[data-assignments]").forEach((target) => {
+    target.innerHTML = LEARN_LOOP.assignments.map((task) => {
+      const complete = done.includes(task.id);
+      return `<article class="assignment-card ${complete ? "is-complete" : ""}">
+        <span>${escapeHtml(task.due)}</span>
+        <h3>${escapeHtml(task.title)}</h3>
+        <p>${escapeHtml(task.course)} - ${task.points} points</p>
+        <button class="button secondary" type="button" data-toggle-assignment="${escapeHtml(task.id)}">${complete ? "Completed" : "Mark done"}</button>
+      </article>`;
+    }).join("");
+  });
+  $$("[data-toggle-assignment]").forEach((button) => {
+    button.addEventListener("click", () => {
+      const next = new Set(assignmentStates());
+      if (next.has(button.dataset.toggleAssignment)) next.delete(button.dataset.toggleAssignment);
+      else next.add(button.dataset.toggleAssignment);
+      setStoredList(keys.assignments, [...next]);
+      renderAssignments();
+      renderLearningStats();
+    });
+  });
+}
+
+function renderStudyCalendar() {
+  $$("[data-study-calendar]").forEach((target) => {
+    target.innerHTML = LEARN_LOOP.calendar.map((item) => `<article class="calendar-card"><span>${escapeHtml(item.day)}</span><strong>${escapeHtml(item.title)}</strong><p>${escapeHtml(item.detail)}</p></article>`).join("");
+  });
+}
+
+function renderLearningStats() {
+  $$("[data-learning-stats]").forEach((target) => {
+    const enrolled = enrollments().length;
+    const lessonsDone = completedLessons().length;
+    const assignmentsDone = assignmentStates().length;
+    target.innerHTML = [
+      ["Courses", enrolled],
+      ["Lessons done", lessonsDone],
+      ["Assignments done", assignmentsDone],
+      ["Quiz attempts", storedList(keys.quiz).length]
+    ].map(([label, value]) => `<article class="metric-card"><span>${label}</span><strong>${value}</strong><p>saved locally</p></article>`).join("");
+  });
+}
+
 function renderResources(query = "") {
   const target = $("[data-resources]");
   renderShelf();
@@ -361,6 +590,44 @@ function renderSavedRuns() {
   $$("[data-saved-records]").forEach((target) => {
     const rows = savedRuns();
     target.innerHTML = rows.length ? rows.map(pathCard).join("") : "<p>No saved study runs yet.</p>";
+  });
+}
+
+function renderQuiz() {
+  const target = $("[data-quiz-questions]");
+  if (!target) return;
+  target.innerHTML = LEARN_LOOP.quizQuestions.map((question, index) => `<fieldset class="quiz-question">
+    <legend>${index + 1}. ${escapeHtml(question.prompt)}</legend>
+    ${question.options.map((option, optionIndex) => `<label><input type="radio" name="${escapeHtml(question.id)}" value="${optionIndex}" required />${escapeHtml(option)}</label>`).join("")}
+  </fieldset>`).join("");
+  renderQuizHistory();
+}
+
+function renderQuizHistory() {
+  $$("[data-quiz-history]").forEach((target) => {
+    const rows = storedList(keys.quiz);
+    target.innerHTML = rows.length
+      ? rows.slice(0, 5).map((row) => `<article><strong>${row.score}%</strong><p>${escapeHtml(row.message)}</p><small>${escapeHtml(row.takenAt)}</small></article>`).join("")
+      : "<p>No quiz attempts yet.</p>";
+  });
+}
+
+function renderDiscussion() {
+  const posts = [...storedList(keys.discussions), ...LEARN_LOOP.discussions];
+  $$("[data-discussion-feed]").forEach((target) => {
+    target.innerHTML = posts.map((post) => `<article class="discussion-post">
+      <span>${escapeHtml(post.topic)}</span>
+      <h3>${escapeHtml(post.author)}</h3>
+      <p>${escapeHtml(post.body)}</p>
+      <small>${Number(post.replies || 0)} replies</small>
+    </article>`).join("");
+  });
+  $$("[data-study-groups]").forEach((target) => {
+    target.innerHTML = LEARN_LOOP.courses.slice(0, 4).map((course) => `<article class="study-group">
+      <strong>${escapeHtml(course.track)}</strong>
+      <p>${escapeHtml(course.title)}</p>
+      <span>${course.lessons} lessons - ${course.weeks} weeks</span>
+    </article>`).join("");
   });
 }
 
@@ -499,6 +766,58 @@ function setupLabs(data) {
     renderShelf();
   });
   renderResources();
+
+  $$("[data-course-search], [data-course-track], [data-course-level]").forEach((item) => item.addEventListener("input", renderCourses));
+  renderCourses();
+  renderLessonRoom();
+  renderAssignments();
+  renderStudyCalendar();
+  renderLearningStats();
+  renderQuiz();
+  renderDiscussion();
+
+  $("[data-note-form]")?.addEventListener("submit", (event) => {
+    event.preventDefault();
+    const form = new FormData(event.currentTarget);
+    const lessonId = localStorage.getItem("learnloop-current-lesson") || LEARN_LOOP.lessons[0].id;
+    const note = {
+      id: `note-${Date.now()}`,
+      lessonId,
+      title: form.get("title") || "Lesson note",
+      body: form.get("body") || "",
+      savedAt: new Date().toLocaleString([], { month: "short", day: "numeric", hour: "2-digit", minute: "2-digit" })
+    };
+    setStoredList(keys.notes, [note, ...storedList(keys.notes)].slice(0, 30));
+    event.currentTarget.reset();
+    renderNotes();
+  });
+
+  $("[data-quiz-form]")?.addEventListener("submit", (event) => {
+    event.preventDefault();
+    const form = new FormData(event.currentTarget);
+    const correct = LEARN_LOOP.quizQuestions.filter((question) => Number(form.get(question.id)) === question.answer).length;
+    const score = Math.round((correct / LEARN_LOOP.quizQuestions.length) * 100);
+    const message = score >= 80 ? "Great work. Unlock the next lesson." : score >= 50 ? "Good attempt. Review the resource shelf and retry." : "Route back to coach review before advancing.";
+    setStoredList(keys.quiz, [{ id: `quiz-${Date.now()}`, score, message, takenAt: new Date().toLocaleString() }, ...storedList(keys.quiz)]);
+    if ($("[data-quiz-status]")) $("[data-quiz-status]").textContent = `${score}% - ${message}`;
+    renderQuizHistory();
+    renderLearningStats();
+  });
+
+  $("[data-discussion-form]")?.addEventListener("submit", (event) => {
+    event.preventDefault();
+    const form = new FormData(event.currentTarget);
+    const post = {
+      id: `post-${Date.now()}`,
+      author: getSession()?.name || form.get("author") || "Guest learner",
+      topic: form.get("topic") || "Study question",
+      body: form.get("body") || "",
+      replies: 0
+    };
+    setStoredList(keys.discussions, [post, ...storedList(keys.discussions)].slice(0, 12));
+    event.currentTarget.reset();
+    renderDiscussion();
+  });
 
   $("[data-timer-start]")?.addEventListener("click", () => {
     if (timerId) return;

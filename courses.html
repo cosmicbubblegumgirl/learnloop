@@ -7,14 +7,14 @@
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-title" content="LearnLoop" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-  <title>Resources | LearnLoop</title>
-  <meta name="description" content="LearnLoop interactive learning resources with concept guides, practice worksheets, reflection prompts, and study timers." />
+  <title>Courses | LearnLoop</title>
+  <meta name="description" content="Browse LearnLoop courses, enroll, track course progress, and preview certificates." />
   <link rel="icon" href="assets/logo.svg" type="image/svg+xml" />
   <link rel="manifest" href="manifest.webmanifest" />
   <link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
   <link rel="stylesheet" href="assets/styles.css" />
 </head>
-<body data-page="resources">
+<body data-page="courses">
   <header class="app-header">
     <a class="brand" href="index.html"><img src="assets/logo.svg" alt="" /><span><strong>LearnLoop</strong><small>Adaptive Learning Studio</small></span></a>
     <nav aria-label="LearnLoop navigation"><a href="index.html">Studio</a><a href="courses.html">Courses</a><a href="lesson.html">Lessons</a><a href="workspace.html">Study Path</a><a href="resources.html">Resources</a><a href="demo.html">Practice Lab</a><a href="community.html">Community</a><a href="database.html">Database</a><a href="mobile-app.html">Mobile App</a><a href="case-study.html">Case Study</a></nav>
@@ -23,28 +23,37 @@
 
   <main>
     <section class="page-hero compact">
-      <p class="eyebrow">Interactive resource library</p>
-      <h1>Practice material is organized by what the learner needs next.</h1>
-      <p>Students can filter guides, worksheets, drills, and reflection prompts. Start a study timer or save a resource to the local learning shelf.</p>
+      <p class="eyebrow">Course catalog</p>
+      <h1>Online study platform courses with enrollment, progress, and certificates.</h1>
+      <p>Students can search courses, filter by track or level, enroll locally, open lessons, and keep progress visible across the app.</p>
     </section>
 
-    <section class="section resource-lab">
-      <aside class="resource-tools">
-        <p class="eyebrow">Study timer</p>
-        <div class="timer-face"><strong data-timer-display>15:00</strong><span>focus sprint</span></div>
-        <div class="mini-actions">
-          <button class="button primary" type="button" data-timer-start>Start</button>
-          <button class="button secondary" type="button" data-timer-reset>Reset</button>
-        </div>
-        <label>Resource filter<input data-resource-search placeholder="Search resources" /></label>
-        <article class="shelf-card">
-          <p class="eyebrow">Saved shelf</p>
-          <div data-resource-shelf></div>
-          <button class="button secondary" type="button" data-shelf-clear>Clear shelf</button>
-        </article>
+    <section class="section course-shell">
+      <aside class="course-sidebar">
+        <p class="eyebrow">My learning</p>
+        <div data-enrollments></div>
+        <div data-certificate></div>
       </aside>
-      <section>
-        <div class="resource-grid" data-resources></div>
+      <section class="course-main">
+        <div class="course-toolbar">
+          <input data-course-search placeholder="Search courses, tracks, or instructors" />
+          <select data-course-track>
+            <option value="all">All tracks</option>
+            <option>Design</option>
+            <option>Code</option>
+            <option>Analytics</option>
+            <option>Study Skills</option>
+            <option>Productivity</option>
+          </select>
+          <select data-course-level>
+            <option value="all">All levels</option>
+            <option>Beginner</option>
+            <option>Intermediate</option>
+            <option>Advanced</option>
+            <option>All levels</option>
+          </select>
+        </div>
+        <div class="course-grid" data-course-catalog></div>
       </section>
     </section>
   </main>
@@ -53,3 +62,4 @@
   <script src="assets/app.js"></script>
 </body>
 </html>
+

@@ -1,11 +1,14 @@
-const CACHE_NAME = "learnloop-mobile-v1";
+const CACHE_NAME = "learnloop-platform-v2";
 const CORE_ASSETS = [
   "./",
   "./index.html",
+  "./courses.html",
+  "./lesson.html",
   "./product.html",
   "./workspace.html",
   "./resources.html",
   "./demo.html",
+  "./community.html",
   "./database.html",
   "./login.html",
   "./case-study.html",
@@ -52,4 +55,3 @@ self.addEventListener("fetch", (event) => {
       .catch(() => caches.match(request).then((cached) => cached || caches.match("./index.html")))
   );
 });
-

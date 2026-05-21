@@ -7,14 +7,14 @@
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-title" content="LearnLoop" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-  <title>Resources | LearnLoop</title>
-  <meta name="description" content="LearnLoop interactive learning resources with concept guides, practice worksheets, reflection prompts, and study timers." />
+  <title>Community | LearnLoop</title>
+  <meta name="description" content="LearnLoop community board with discussions, study groups, and course announcements." />
   <link rel="icon" href="assets/logo.svg" type="image/svg+xml" />
   <link rel="manifest" href="manifest.webmanifest" />
   <link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
   <link rel="stylesheet" href="assets/styles.css" />
 </head>
-<body data-page="resources">
+<body data-page="community">
   <header class="app-header">
     <a class="brand" href="index.html"><img src="assets/logo.svg" alt="" /><span><strong>LearnLoop</strong><small>Adaptive Learning Studio</small></span></a>
     <nav aria-label="LearnLoop navigation"><a href="index.html">Studio</a><a href="courses.html">Courses</a><a href="lesson.html">Lessons</a><a href="workspace.html">Study Path</a><a href="resources.html">Resources</a><a href="demo.html">Practice Lab</a><a href="community.html">Community</a><a href="database.html">Database</a><a href="mobile-app.html">Mobile App</a><a href="case-study.html">Case Study</a></nav>
@@ -23,29 +23,34 @@
 
   <main>
     <section class="page-hero compact">
-      <p class="eyebrow">Interactive resource library</p>
-      <h1>Practice material is organized by what the learner needs next.</h1>
-      <p>Students can filter guides, worksheets, drills, and reflection prompts. Start a study timer or save a resource to the local learning shelf.</p>
+      <p class="eyebrow">Student community</p>
+      <h1>Discussion boards, study groups, and instructor-style prompts.</h1>
+      <p>Students can post questions, join course groups, and keep peer learning tied to the same platform experience.</p>
     </section>
 
-    <section class="section resource-lab">
-      <aside class="resource-tools">
-        <p class="eyebrow">Study timer</p>
-        <div class="timer-face"><strong data-timer-display>15:00</strong><span>focus sprint</span></div>
-        <div class="mini-actions">
-          <button class="button primary" type="button" data-timer-start>Start</button>
-          <button class="button secondary" type="button" data-timer-reset>Reset</button>
+    <section class="section community-shell">
+      <section class="discussion-board">
+        <div class="section-heading">
+          <p class="eyebrow">Discussion board</p>
+          <h2>Ask, reflect, and share study wins.</h2>
         </div>
-        <label>Resource filter<input data-resource-search placeholder="Search resources" /></label>
-        <article class="shelf-card">
-          <p class="eyebrow">Saved shelf</p>
-          <div data-resource-shelf></div>
-          <button class="button secondary" type="button" data-shelf-clear>Clear shelf</button>
+        <form class="discussion-form" data-discussion-form>
+          <label>Name<input name="author" placeholder="Guest learner" /></label>
+          <label>Topic<input name="topic" placeholder="Study strategy" required /></label>
+          <label>Post<textarea name="body" placeholder="Write your question or reflection" required></textarea></label>
+          <button class="button primary" type="submit">Post discussion</button>
+        </form>
+        <div class="discussion-feed" data-discussion-feed></div>
+      </section>
+      <aside class="groups-panel">
+        <p class="eyebrow">Study groups</p>
+        <div data-study-groups></div>
+        <article class="announcement-card">
+          <span>Announcement</span>
+          <h3>Weekly sprint opens Friday</h3>
+          <p>Complete one lesson, one quiz, and one discussion post to keep your weekly learning streak alive.</p>
         </article>
       </aside>
-      <section>
-        <div class="resource-grid" data-resources></div>
-      </section>
     </section>
   </main>
 
@@ -53,3 +58,4 @@
   <script src="assets/app.js"></script>
 </body>
 </html>
+

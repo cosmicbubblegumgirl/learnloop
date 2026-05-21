@@ -3,38 +3,46 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Apple App | LearnLoop</title>
-  <meta name="description" content="Apple install link for the LearnLoop student learning app." />
   <meta name="theme-color" content="#14b8a6" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-title" content="LearnLoop" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <title>Lesson Room | LearnLoop</title>
+  <meta name="description" content="LearnLoop lesson room with playlist, video-style lesson stage, checkpoints, and saved notes." />
+  <link rel="icon" href="assets/logo.svg" type="image/svg+xml" />
   <link rel="manifest" href="manifest.webmanifest" />
   <link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
-  <link rel="icon" href="assets/logo.svg" type="image/svg+xml" />
   <link rel="stylesheet" href="assets/styles.css" />
 </head>
-<body data-page="apple">
+<body data-page="lesson">
   <header class="app-header">
-    <a class="brand" href="index.html"><img src="assets/logo.svg" alt="" /><span><strong>LearnLoop</strong><small>Apple App</small></span></a>
+    <a class="brand" href="index.html"><img src="assets/logo.svg" alt="" /><span><strong>LearnLoop</strong><small>Adaptive Learning Studio</small></span></a>
     <nav aria-label="LearnLoop navigation"><a href="index.html">Studio</a><a href="courses.html">Courses</a><a href="lesson.html">Lessons</a><a href="workspace.html">Study Path</a><a href="resources.html">Resources</a><a href="demo.html">Practice Lab</a><a href="community.html">Community</a><a href="database.html">Database</a><a href="mobile-app.html">Mobile App</a><a href="case-study.html">Case Study</a></nav>
     <div class="header-actions"><span data-session-pill>Guest learner</span><a class="nav-button" href="login.html">Login</a><button class="nav-button" type="button" data-theme-toggle>Dark</button></div>
   </header>
 
   <main>
-    <section class="install-hero apple-install">
-      <p class="eyebrow">Apple app link</p>
-      <h1>Install LearnLoop on iPhone or iPad.</h1>
-      <p>Open this page in Safari, tap Share, then Add to Home Screen. LearnLoop opens as a full-screen student learning app.</p>
-      <div class="hero-actions">
-        <a class="button primary" href="index.html">Open Apple web app</a>
-        <a class="button secondary" href="mobile-app.html">Mobile app hub</a>
-      </div>
-      <div class="apple-steps">
-        <span>Safari</span>
-        <span>Share</span>
-        <span>Add to Home Screen</span>
-      </div>
+    <section class="page-hero compact">
+      <p class="eyebrow">Lesson room</p>
+      <h1>Watch lessons, complete checkpoints, and save notes like a learning platform.</h1>
+      <p>Select a lesson, read the transcript, mark it complete, and keep study notes attached to the current lesson.</p>
+    </section>
+
+    <section class="section lesson-shell">
+      <aside class="lesson-playlist">
+        <p class="eyebrow">Module playlist</p>
+        <div data-lesson-list></div>
+      </aside>
+      <section data-lesson-player></section>
+      <aside class="note-panel">
+        <p class="eyebrow">Lesson notes</p>
+        <form data-note-form>
+          <label>Title<input name="title" placeholder="Important idea" required /></label>
+          <label>Note<textarea name="body" placeholder="Write a quick study note" required></textarea></label>
+          <button class="button primary" type="submit">Save note</button>
+        </form>
+        <div class="notes-list" data-notes></div>
+      </aside>
     </section>
   </main>
 

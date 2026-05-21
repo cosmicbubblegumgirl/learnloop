@@ -17,7 +17,7 @@
 <body data-page="study-path">
   <header class="app-header">
     <a class="brand" href="index.html"><img src="assets/logo.svg" alt="" /><span><strong>LearnLoop</strong><small>Adaptive Learning Studio</small></span></a>
-    <nav aria-label="LearnLoop navigation"><a href="index.html">Studio</a><a href="product.html">Builder</a><a href="workspace.html">Study Path</a><a href="resources.html">Resources</a><a href="demo.html">Practice Lab</a><a href="database.html">Database</a><a href="mobile-app.html">Mobile App</a><a href="case-study.html">Case Study</a></nav>
+    <nav aria-label="LearnLoop navigation"><a href="index.html">Studio</a><a href="courses.html">Courses</a><a href="lesson.html">Lessons</a><a href="workspace.html">Study Path</a><a href="resources.html">Resources</a><a href="demo.html">Practice Lab</a><a href="community.html">Community</a><a href="database.html">Database</a><a href="mobile-app.html">Mobile App</a><a href="case-study.html">Case Study</a></nav>
     <div class="header-actions"><span data-session-pill>Guest learner</span><a class="nav-button" href="login.html">Login</a><button class="nav-button" type="button" data-theme-toggle>Dark</button></div>
   </header>
 
@@ -45,6 +45,27 @@
         <p class="eyebrow">Coach feed</p>
         <div data-live-panel></div>
       </aside>
+    </section>
+
+    <section class="section platform-dashboard">
+      <div class="section-heading">
+        <p class="eyebrow">Platform dashboard</p>
+        <h2>Assignments, course stats, and weekly study plan in one place.</h2>
+      </div>
+      <div class="study-platform-grid">
+        <article class="dashboard-panel wide-panel">
+          <p class="eyebrow">Assignments</p>
+          <div data-assignments></div>
+        </article>
+        <article class="dashboard-panel">
+          <p class="eyebrow">Weekly plan</p>
+          <div data-study-calendar></div>
+        </article>
+        <article class="dashboard-panel">
+          <p class="eyebrow">My progress</p>
+          <div class="metric-grid compact" data-learning-stats></div>
+        </article>
+      </div>
     </section>
   </main>
 
