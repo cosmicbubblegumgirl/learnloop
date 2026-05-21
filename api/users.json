@@ -1,13 +1,13 @@
 {
   "product": "LearnLoop",
-  "mode": "Demo authentication for portfolio use only.",
+  "mode": "Demo authentication for student study use.",
   "users": [
     {
       "id": "u-1",
-      "name": "Simone Govender",
-      "email": "simone@learnloop.demo",
+      "name": "Student Learner",
+      "email": "student@learnloop.demo",
       "password": "demo123",
-      "role": "Student product designer"
+      "role": "Active student"
     },
     {
       "id": "u-2",

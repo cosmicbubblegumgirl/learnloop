@@ -1,3 +1,5 @@
 node_modules/
 server/db.json
-
+android-apk/build/
+android-apk/*.jks
+downloads/*.idsig

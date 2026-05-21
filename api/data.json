@@ -2,7 +2,7 @@
   "product": "LearnLoop",
   "category": "Adaptive Learning Studio for Students",
   "backend": "GitHub Pages static JSON API plus included local Node backend with health, login, and records routes.",
-  "generatedBy": "A Quantum Cupcake Creation (Simoné Govender)",
+  "generatedBy": "LearnLoop student study resource",
   "metrics": [
     {
       "label": "Recommended path",

@@ -60,6 +60,24 @@
       "short_name": "Shelf",
       "url": "./resources.html",
       "icons": [{ "src": "assets/icon-192.png", "sizes": "192x192", "type": "image/png" }]
+    },
+    {
+      "name": "Upload Library",
+      "short_name": "Uploads",
+      "url": "./uploads.html",
+      "icons": [{ "src": "assets/icon-192.png", "sizes": "192x192", "type": "image/png" }]
+    },
+    {
+      "name": "Loop Tools",
+      "short_name": "Tools",
+      "url": "./loop-tools.html",
+      "icons": [{ "src": "assets/icon-192.png", "sizes": "192x192", "type": "image/png" }]
+    },
+    {
+      "name": "Study Guide",
+      "short_name": "Guide",
+      "url": "./study-guide.html",
+      "icons": [{ "src": "assets/icon-192.png", "sizes": "192x192", "type": "image/png" }]
     }
   ]
 }
